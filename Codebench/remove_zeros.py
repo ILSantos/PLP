@@ -29,3 +29,26 @@ A função de remoção deve ter complexidade O(n).
                 Caso 2: 
                 Caso 3: 1
 """
+
+def remove_zero(vet):
+	result=[]
+	for i in vet:
+		if (i!=0):
+			result.append(i)
+	return result
+
+count=1
+n=int(input())
+while(n>0):
+	vet=[]
+	for i in range(n):
+		num=int(input())
+		vet.append(num)
+
+	vet = remove_zero(vet)
+	print('Caso {}: '.format(count), end="") 
+	for i in vet:
+		print('{} '.format(i), end = "")
+	print('')
+	count+=1
+	n=int(input())
