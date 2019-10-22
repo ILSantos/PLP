@@ -27,3 +27,44 @@ comparações. Não compare todos os pares de elementos para verificar a soma.
                 nao
                 sim 
 """
+
+def bin(l,dif):
+	inicio = 0
+	fim = len(l)-1
+	
+	while(inicio<fim):
+		meio = int((inicio+fim)/2)
+		if(l[meio]==dif):
+			return meio
+		elif(dif<l[meio]):
+			fim = meio-1
+		else:
+			inicio = meio+1
+	return -1
+	
+def f(l,x):
+	for i in l:
+		dif = x-i
+		result = bin(l,dif)			
+		if (result!=-1):
+			return True
+			
+	return False
+
+n=int(input())
+vet=[]
+consultas = []
+for i in range(n):
+	num=int(input())
+	vet.append(num)
+
+q = int(input())
+for i in range(q):
+	num=int(input())
+	consultas.append(num)
+
+for i in consultas:
+	if (f(vet,i)==True):
+		print("sim")
+	else:
+		print("nao")
