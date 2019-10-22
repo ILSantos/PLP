@@ -46,3 +46,55 @@ duas casas de precisão, os valores da matriz resultante A×B.
                 2.00 2.00
                 2.00 2.00
 """
+
+def matmul(m,n,p,matriz1,matriz2,result):
+	for i in range(m):
+		linha=[]
+		for j in range(p):
+			linha.append(0)
+		result.append(linha)
+		
+	for i in range(m):
+		for j in range(p):
+			for k in range(n):
+				result[i][j] = result[i][j] + (matriz1[i][k] * matriz2[k][j])
+			
+
+m = int(input())
+n1 = int(input())
+cont = 1
+while(m!=0 and n1!=0):
+	matriz1 = []
+	for i in range(m):
+		linha = []
+		for j in range(n1):
+			num = float(input())
+			linha.append(num)
+		matriz1.append(linha)
+		
+	n2 = int(input())
+	p = int(input())
+
+	matriz2 = []
+	for i in range(n2):
+		linha = []
+		for j in range(p):
+			num = float(input())
+			linha.append(num)
+		matriz2.append(linha)
+	result=[]	
+	if(n1==n2):
+		matmul(m,n1,p,matriz1,matriz2,result)
+		print('Caso #{} '.format(cont), end="\n") 
+		for i in range (m):
+			string = ""
+			for j in result[i]:
+				string = string + "{:.2f} ".format(j)
+			print(string)
+			
+	else:
+		print('Caso #{} '.format(cont), end="") 
+	cont+=1
+		
+	m = int(input())
+	n1 = int(input())
