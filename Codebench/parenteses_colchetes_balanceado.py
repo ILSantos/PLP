@@ -27,3 +27,30 @@ Utilize uma lista para implementar a pilha.
                 SIM
                 NAO
 """
+
+def computando(entrada):
+	if(len(entrada)%2!=0):
+		return False
+	lista = []
+	for i in entrada:
+		if (i == '(') or (i== '['):
+			lista.append(i)
+		else:
+			if lista == []:
+				return False
+			if (lista[-1] == '(' and i == ')') or (lista[-1] == '[' and i == ']'):
+				lista.pop()
+	if lista == []:
+		return True
+	else:
+		return False
+
+	
+	
+entrada = input()
+while(entrada != '###'):
+	if(computando(entrada)==True):
+		print("SIM")
+	else:
+		print("NAO")
+	entrada = input()
