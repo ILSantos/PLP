@@ -26,3 +26,22 @@ Não use pilha, nem recursão.
                 SIM
                 NAO
  """
+
+entrada = input()
+while(entrada!='###'):
+	abre=0
+	fecha=0
+	for i in (entrada):
+		if i == '(':
+			abre+=1
+		if i == ')':
+			fecha+=1
+			if(abre>0):
+				abre-=1
+				fecha-=1
+				
+	if abre == 0 and fecha == 0:
+		print("SIM")
+	else:
+		print("NAO")
+	entrada = input()
