@@ -11,28 +11,28 @@ Prof. Leafar possuem as seguintes informações:
 Para gerar a lista, o professor lhe pediu para escrever um programa que lê a sua base de músicas e, depois, uma lista
 de nomes de artistas e títulos de músicas que devem constar na playlist. Em seguida, para cada música que foi encontrada,
 seu programa deve imprimir o número de músicas na lista, a duração da lista e, claro, os arquivos que o professor deverá
-copiar para seu pen drive. A lista pode conter entradas repetidas. Mas a duração da lista tem um limite. Veja as 
-restrições ao final do enunciado.
+copiar para seu pen drive. A lista pode conter entradas repetidas. Mas a duração da lista tem um limite. Veja as restrições
+ao final do enunciado.
 
 Entrada
-A entrada será uma sequência de números inteiros e strings. As strings serão combinações de quaisquer caracteres 
-imprimíveis (isto é, excluem-se apenas caracteres de controle), exceto brancos. O primeiro valor da entrada será 
-um inteiro N, indicando o número de músicas da base. A base terá no máximo 100 músicas. Em seguida, aparecem N 
-registros. Cada registro possui uma palavra que representa o nome do autor e uma palavra que representa o nome da 
+A entrada será uma sequência de números inteiros e strings. As strings serão combinações de quaisquer caracteres
+imprimíveis (isto é, excluem-se apenas caracteres de controle), exceto brancos. O primeiro valor da entrada será
+um inteiro N, indicando o número de músicas da base. A base terá no máximo 100 músicas. Em seguida, aparecem N registros.
+Cada registro possui uma palavra que representa o nome do autor e uma palavra que representa o nome da
 música, seguida de uma palavra que representa o endereço do arquivo da música no disco. Todas as palavras são strings
 com no máximo 100 caracteres e não contêm espaços. Finalmente, o quarto valor é a duração da música em segundos (pelo
-menos 1 e no máximo 5400 segundos). Cada parte da entrada aparece em uma única linha. Após a lista de músicas, haverá 
+menos 1 e no máximo 5400 segundos). Cada parte da entrada aparece em uma única linha. Após a lista de músicas, haverá
 um inteiro Q indicando o número de músicas que o professor deseja tentar adicionar à playlist. As 2×Q palavras seguintes
 serão os nomes dos artistas e os títulos das suas respectivas músicas que o professor tentará incluir na playlist.
 
 Saída
-A saída deve conter várias linhas. Se a lista resultante contiver R músicas, então a primeira linha deve ter o texto 
-Lista gerada com R musicas e duração MM:SS Sendo que MM:SS deve representar a duração total da lista em minutos e 
-segundos. Note que a lista deve possuir no máximo 60 minutos (ver restrições a seguir). As R linhas seguintes devem 
+A saída deve conter várias linhas. Se a lista resultante contiver R músicas, então a primeira linha deve ter o texto
+Lista gerada com R musicas e duração MM:SS Sendo que MM:SS deve representar a duração total da lista em minutos e
+segundos. Note que a lista deve possuir no máximo 60 minutos (ver restrições a seguir). As R linhas seguintes devem
 conter os nomes dos arquivos com as músicas.
 
 Restrições
-O Prof. Leafar é impaciente. Portanto a litsta deve ter no máximo 60 minutos (3600 segundos). Não inclua nenhuma música
+O Prof. Leafar é impaciente. Portanto a lista deve ter no máximo 60 minutos (3600 segundos). Não inclua nenhuma música
 na playlist se ela fizer o tempo total ser maior que 60 minutos.
 
     Entrada:    8
