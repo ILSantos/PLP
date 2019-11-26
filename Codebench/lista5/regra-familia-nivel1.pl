@@ -157,6 +157,12 @@ casal(harry, ginny).
 
 pai(P,F) :- mae(M,F), casal(P,M).
 pais(P,F) :- mae(P,F) | pai(P,F).
+irmaos(A, B) :- mae(M,A) , mae(M,B), A\=B.
+irma(M,X) :- irmaos(M,X), mulher(X).
+irmao(H,X) :- irmaos(H,X), homem(X).
+avo(V,N) :- pais(V,X) , pais(X,N).
+avo_paterno(V,N) :- pais(V,X), pais(X,N), homem(X).
+avo_materno(V,N) :- pais(V,X), pais(X,N), mulher(X).
 
 %%%%%%%%%%
 % Inserir na base as seguintes regras:
@@ -181,9 +187,11 @@ pais(P,F) :- mae(P,F) | pai(P,F).
 % Quem é a bisavó de bellatrix?
 
 %%%%% Consultas
-%
-%
-% Descreva aqui as consultas que voce usou
-% para testar sua base de conhecimento
-%
-%
+%pai(X, harry).
+%pai(harry,F).
+%irmao(ronny,X).
+%irma(andromeda,X).
+%avo(V, george).
+%avo_paterno(V, roxanne).
+%avo(V, george), homem(V).
+%avo(V,cygnus_II), mulher(V).
